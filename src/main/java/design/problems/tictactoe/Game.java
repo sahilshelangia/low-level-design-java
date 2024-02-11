@@ -47,7 +47,7 @@ public class Game {
                 int x = SCANNER.nextInt();
                 int y = SCANNER.nextInt();
                 try {
-                    if (board.move(new Move(x, y, turn))) {
+                    if (board.playMove(new Move(x, y, turn))) {
                         turn.getUser().incrementWins();
                         return turn.getUser();
                     }
@@ -60,11 +60,10 @@ public class Game {
 
             System.out.println("Do you want to do it?");
             if (SCANNER.next().equals("yes")) {
-                // undo logic here.
                 // if it's undo put the same player in front of the queue.
                 players.addFirst(turn);
 
-                // find the last move and remove the piece from that cell.
+                // find the last move and remove the piece from that cell and decrease frequency as well.
                 this.board.undoMove(movesHistory.get(movesHistory.size() - 1));
                 this.movesHistory.pop();
                 continue;

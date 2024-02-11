@@ -32,7 +32,7 @@ public class Board {
      * @return true if current player win the game after this move, else false.
      * @throws IllegalArgumentException if x and y aren't valid. or some piece is already there on given position.
      */
-    public boolean move(Move move) throws IllegalArgumentException {
+    public boolean playMove(Move move) throws IllegalArgumentException {
         int x = move.getX();
         int y = move.getY();
         Player player = move.getPlayer();
