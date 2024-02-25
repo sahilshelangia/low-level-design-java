@@ -7,9 +7,8 @@ public class Main {
     public static void main(String[] args) {
         User a = new User("Sahil");
         User b = new User("Sanjit");
-        User c = new User("Deepak");
 
-        Game game = new Game(4, Arrays.asList(a, b, c));
+        Game game = new Game(3, Arrays.asList(a, b));
         User winner = game.start();
         if (winner == null) {
             System.out.println("Draw");

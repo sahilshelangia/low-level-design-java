@@ -58,7 +58,7 @@ public class Game {
                 }
             }
 
-            System.out.println("Do you want to do it?");
+            System.out.println("Do you want to undo it?");
             if (SCANNER.next().equals("yes")) {
                 // if it's undo put the same player in front of the queue.
                 players.addFirst(turn);
