@@ -21,7 +21,7 @@ public class UserController {
 
     public User getUserId(String id){
         for(User user: users){
-            if(user.getId()==id){
+            if(user.getId().equals(id)){
                 return user;
             }
         }

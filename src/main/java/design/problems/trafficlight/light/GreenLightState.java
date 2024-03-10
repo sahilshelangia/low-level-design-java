@@ -1,6 +1,5 @@
 package design.problems.trafficlight.light;
 
-import design.trafficlight.light.Direction;
 
 public class GreenLightState extends TrafficLight {
     public GreenLightState(String id) {

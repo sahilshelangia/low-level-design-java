@@ -21,7 +21,7 @@ public class GroupController {
 
     public Group getGroupById(String id) {
         for (Group group : groups) {
-            if (group.getId() == id) {
+            if (group.getId().equals(id)) {
                 return group;
             }
         }

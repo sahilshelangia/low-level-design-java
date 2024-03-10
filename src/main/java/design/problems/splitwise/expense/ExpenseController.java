@@ -14,6 +14,7 @@ public class ExpenseController {
     }
 
     public Expense createExpense(String id, String description, User paidBy, List<Split> splits, double amount) {
+        // todo: some validator??
         Expense expense = new Expense(id, description, paidBy, splits, amount);
         balanceSheetController.updateBalanceSheet(expense);
         return expense;
